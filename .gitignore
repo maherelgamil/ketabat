@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 /vendor
 /node_modules
 /.idea
 .env
 /.phpintel
+=======
+/bootstrap/compiled.php
+.env.*.php
+.env.php
+.env
+>>>>>>> 708ed19043ad4d0969e0c6cd19fbbba1ae8a1b36
