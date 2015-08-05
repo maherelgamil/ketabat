@@ -1,0 +1,13 @@
+{
+    "name": "chakosh/network",
+    "description": "A package which provides a simple UI for managing users",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "AmirMasoud",
+            "email": "amirmasood32@ymail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

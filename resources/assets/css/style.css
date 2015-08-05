@@ -1,0 +1,262 @@
+/**
+ * 1.0 General
+ */
+body {
+	background: #fff url(../../images/pink_rice.png) repeat repeat center center;
+	min-width: 600px !important;
+}
+
+a {
+	color: #2195be;
+
+	-webkit-transition: all .3s linear;
+	   -moz-transition: all .3s linear;
+	    -ms-transition: all .3s linear;
+	     -o-transition: all .3s linear;
+	        transition: all .3s linear;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+
+	-webkit-transition: all .3s linear;
+	   -moz-transition: all .3s linear;
+	    -ms-transition: all .3s linear;
+	     -o-transition: all .3s linear;
+	        transition: all .3s linear;
+}
+
+.red {
+	color: #FA3C3C;
+}
+
+textarea {
+	max-width: 520px;
+}
+
+/**
+ * 2.0 Header
+ */
+
+.flash-message .alert {
+	border-radius: 0;
+	margin-bottom: 0;
+}
+
+.logo {
+	background: #2195be url(../../images/logo-white.png) no-repeat no-repeat center 130px;
+	background-size: 100px;
+	height: 350px;
+	width: 100%;
+	z-index: -1;
+	position:relative;
+}
+
+nav {
+	height: 100px;
+	background-color: #FFF;
+	max-width: 600px;
+	margin: 0 auto -100px;
+	text-align: center
+}
+
+nav a {
+	width: 200px;
+	display: table-cell;
+	padding: 33px 0px 32px 0px;
+	font-weight: bold;
+}
+
+nav a.bootstrap {
+	background-color: #159ECF;
+	color: #FFF;
+	border-bottom: 15px solid #0F81A9;
+}
+
+nav a.wordpress {
+	background-color: #159ECF;
+	color: #FFF;
+	border-bottom: 15px solid #0F81A9;
+}
+
+nav a.laravel {
+	background-color: #159ECF;
+	color: #FFF;
+	border-bottom: 15px solid #0F81A9;
+}
+
+/**
+ * 3.0 Article
+ */
+section {
+	background-size: 100%;
+}
+
+section article:first-child {
+	margin-top: -100px;
+}
+
+article {
+	max-width: 600px;
+	padding: 40px;
+	margin: 40px auto 40px;
+	background-color: #FFF;
+	margin-bottom: 50px;
+}
+
+article h1:first-child {
+	margin-top: 0;
+}
+
+article p:last-child {
+	margin-bottom: 0;
+}
+
+article time {
+	margin-top: 25px;
+	display: block;
+	color: #999;
+}
+
+.posts-nav {
+	width: 600px;
+	margin: 0 auto 50px;
+	height: 50px;
+}
+
+.next-posts {
+	width: 300px;
+	height: 50px;
+	float: left;
+
+}
+
+.next-posts p {
+	display: inline-block;
+	position: relative;
+	top: -9px;
+	padding-left: 20px;
+	color: #333;
+	font-weight: bold;
+
+	-webkit-transition: all .3s linear;
+	   -moz-transition: all .3s linear;
+	    -ms-transition: all .3s linear;
+	     -o-transition: all .3s linear;
+	        transition: all .3s linear;
+}
+
+.prev-posts {
+	width: 300px;
+	height: 50px;
+	float: right;
+	text-align: right;
+}
+
+.prev-posts p {
+	display: inline-block;
+	position: relative;
+	top: -9px;
+	padding-right: 20px;
+	color: #333;
+	font-weight: bold;
+
+	-webkit-transition: all .3s linear;
+	   -moz-transition: all .3s linear;
+	    -ms-transition: all .3s linear;
+	     -o-transition: all .3s linear;
+	        transition: all .3s linear;
+}
+
+.nav-icon {
+	width: 50px !important;
+	height: 50px;
+	background-color: #2195be;
+	color: #FFF;
+	font-size: 47px !important;
+}
+
+.next-posts:hover,
+.prev-posts:hover,
+.next-posts:hover p,
+.prev-posts:hover p {
+	color: #FFF;
+	-webkit-transition: all .3s linear;
+	   -moz-transition: all .3s linear;
+	    -ms-transition: all .3s linear;
+	     -o-transition: all .3s linear;
+	        transition: all .3s linear;
+}
+
+.add-new-article {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #2195be;
+    color: #FFF;
+    padding: 12px;
+    font-size: 40px;
+    margin: 40px 32px;
+    border-radius: 100%;
+    width: 75px;
+    height: 75px;
+    text-shadow: 1px 1px 1px #555;
+
+    transition: all ease .3s;
+    -o-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+}
+
+.add-new-article:hover,
+.add-new-article:focus {
+    transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+
+    transition: all ease .3s;
+    -o-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+}
+
+/**
+ * 3.0 Footer
+ */
+footer:hover i {
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+footer p {
+	color: #888;
+	text-align: center;
+	padding: 50px 0;
+}
+
+/**
+ * Register Page
+ */
+.register .progress {
+	margin-top: 10px;
+}
+
+/**
+ * Cart
+ */
+.badge {
+	background-color: #0F81A9;
+}
