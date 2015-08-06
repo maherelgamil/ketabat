@@ -4,6 +4,7 @@
 /.idea
 .env
 /.phpintel
+.gitattributes
 =======
 /bootstrap/compiled.php
 .env.*.php
