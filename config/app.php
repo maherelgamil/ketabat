@@ -26,7 +26,7 @@ return [
 	|
 	*/
 
-	'url' => 'http://localhost:32/',
+	'url' => 'http://localhost/',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
 	|
 	*/
 
-	'key' => env('APP_KEY', 'rQunhFBwWsbiwx0zphXDKfFjzfJikuDf'),
+	'key' => env('APP_KEY', 'SomeRandomString'),
 
 	'cipher' => 'MCRYPT_RIJNDAEL_128',
 
