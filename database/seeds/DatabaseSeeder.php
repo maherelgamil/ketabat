@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder {
 
         $this->call('UserTableSeeder');
 
-        $this->command->info('User table seeded!');
+        $this->command->info('User table seeded. User a@b.co with 123465 password created');
 	}
 
 }
@@ -32,7 +32,8 @@ class UserTableSeeder extends Seeder {
         User::create([
                 'email' => 'a@b.co',
                 'password' => bcrypt('123456'),
-                'role' => 'admin'
+                'role' => 'admin',
+                'remove' => 0
             ]);
     }
 

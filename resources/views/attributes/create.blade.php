@@ -6,7 +6,7 @@
 		@include ('errors.form', ['errors' => $errors])
 
 		{!! Form::open(['action' => 'AttributesController@store']) !!}
-			@include ( 'Attributes.partials.form', ['submitButtonText' => 'Add New Attribute'] )
+			@include ( 'attributes.partials.form', ['submitButtonText' => 'Add New Attribute'] )
 		{!! Form::close() !!}
 	</article>
 @stop

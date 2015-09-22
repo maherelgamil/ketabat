@@ -24,7 +24,7 @@ class UserRequest extends Request
     public function rules()
     {
         return [
-            'email'           => 'required',
+            'email'           => 'required|unique:users,email',
             'password'        => 'required',
             'retype_password' => 'required|same:password'
         ];

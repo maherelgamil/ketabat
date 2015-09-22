@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DB;
 
-class pagesController extends Controller {
+class PagesController extends Controller {
 
 	/**
 	 * return home page

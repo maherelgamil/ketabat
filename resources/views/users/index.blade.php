@@ -8,8 +8,7 @@
 					<tr>
 						<th class="text-center">Email</th>
 						<th class="text-center">Role</th>
-						<th class="text-center">Delete</th>
-						<th class="text-center">Edit</th>
+						<th class="text-center"></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -18,13 +17,11 @@
 						<td>{{ $user->email }}</td>
 						<td>{{ $user->role }}</td>
 						<td>
-							{!! Form::open(['action' => ['UsersController@destroy', $user->id], 'method' => 'DELETE']) !!}
-								<button type="submit" class="btn btn-danger btn-block btn-sm" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-fw fa-trash"></i></button>
+							{!! Form::open(['action' => ['UsersController@destroy', $user->id], 'method' => 'DELETE', 'class' => 'form-inline pull-right']) !!}
+								<button {{ (!$user->remove) ? "disabled" : "" }} type="submit" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-fw fa-trash"></i></button>
 							{!! Form::close() !!}
-						</td>
-						<td>
 							<a href="{!! URL::route('admin.users.edit', ['id' => $user->id]) !!}">
-								<button type="submit" class="btn btn-primary btn-sm btn-block" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-fw fa-edit"></i></button>
+								<button type="submit" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-fw fa-edit"></i></button>
 							</a>
 						</td>
 					@endforeach

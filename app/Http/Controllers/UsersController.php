@@ -32,7 +32,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        $roles = $this->getEnumValues('users', 'role');
+        $roles = self::getUserRoles();
 
         return view('users.create', compact('roles'));
     }
@@ -58,23 +58,25 @@ class UsersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  User $user
      * @return Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        //
+        return view('users.show', compact('user'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  User $user
      * @return Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        
+        $roles = self::getUserRoles();
+
+        return view('users.edit', compact('user', 'roles'));
     }
 
     /**
@@ -83,9 +85,25 @@ class UsersController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update($id)
+    public function update(Request $request, User $user)
     {
-        //
+        $this->validate($request, [
+            'email' => 'required|unique:users,email,' . $user->id,
+            'retype_password' => 'same:password'
+        ]);
+
+        if ($request->input('password') == "") :
+            $updateRequest['email'] = $request->input('email');
+            $updateRequest['role'] = $request->input('role');
+            $user->update($updateRequest);
+        else :
+            $request['password'] = \Hash::make($request->input('password'));
+            $user->update($request->all());
+        endif;
+
+        \Flash::success('Your user has been Updated');
+
+        return redirect('admin/users');
     }
 
     /**
@@ -96,11 +114,18 @@ class UsersController extends Controller
      */
     public function destroy(User $user)
     {
-        $user->delete();
+        if (! $user->remove) :
 
-        \Flash::success('User has been Deleted');
+            \Flash::error('Default user cannot be removed.');
 
-        return redirect()->route('admin.users.index');
+            return redirect()->route('admin.users.index');
+        else :
+            $user->delete();
+
+            \Flash::success('User has been Deleted');
+
+            return redirect()->route('admin.users.index');
+        endif;
     }
 
     private static function getEnumValues($table, $column)
@@ -115,5 +140,10 @@ class UsersController extends Controller
         }
 
         return $enum;
+    }
+
+    private static function getUserRoles()
+    {
+        return self::getEnumValues('users', 'role');
     }
 }

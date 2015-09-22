@@ -1,5 +1,5 @@
 <div class="form-group">
-	{!! Form::label('email', 'Eamil: ') !!}
+	{!! Form::label('email', 'Email: ') !!}
 	{!! Form::input('text', 'email', null, ['class' => 'form-control']) !!}
 </div>
 
@@ -9,7 +9,7 @@
 </div>
 
 <div class="form-group">
-	{!! Form::label('retype_password', 'Re-type Password: ') !!}
+	{!! Form::label('retype_password', 'retype-Password: ') !!}
 	{!! Form::password('retype_password', ['class' => 'form-control']) !!}
 </div>
 

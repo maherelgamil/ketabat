@@ -27,16 +27,16 @@ Route::post('ajax/login', 'AjaxController@login');
 /**
  * pages routes
  */
-Route::get('contact', 'pagesController@contact');
-Route::post('contact', 'pagesController@contact');
-Route::get('about', 'pagesController@about');
+Route::get('contact', 'PagesController@contact');
+Route::post('contact', 'PagesController@contact');
+Route::get('about', 'PagesController@about');
 
 /**
  * admin routes
  */
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function()
 {
-	Route::get('/', 'pagesController@admin');
+	Route::get('/', 'PagesController@admin');
 
 	Route::resource('articles', 'ArticlesController');
 
