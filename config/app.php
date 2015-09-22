@@ -152,8 +152,7 @@ return [
 		'App\Providers\BusServiceProvider',
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
-		'App\Providers\RouteServiceProvider',
-		'Laravel\Socialite\SocialiteServiceProvider'
+		'App\Providers\RouteServiceProvider'
 		],
 
 	/*
